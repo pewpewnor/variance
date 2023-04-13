@@ -9,6 +9,8 @@ This is a utility class that can help Tailwind CSS users to create multiple vari
 ### Step 1: Create a new variance, usually in it's own file
 
 ```javascript
+// buttonVariance.js
+
 const buttonVariance = new Variance("flex justify-between", {
   size: {
     default: "h-2 w-2 bg-red-400",
