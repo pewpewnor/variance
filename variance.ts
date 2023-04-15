@@ -27,7 +27,7 @@ class Variance {
     for (const chosenVariantType of chosenVariantKeys) {
       if (!(chosenVariantType in this.createdVariants)) {
         throw new Error(
-          `Chosen variant type "${chosenVariantType}" does not exist!`
+          `Error: chosen variant type "${chosenVariantType}" does not exist. File: variance.ts, Line: 31`
         );
       }
     }
@@ -41,7 +41,7 @@ class Variance {
             return variant[chosenVariantKey];
           } else {
             throw new Error(
-              `Chosen variant "${chosenVariantKey}" does not exist in variant type "${variantType}"!`
+              `Error: chosen variant key "${chosenVariantKey}" does not exist in variant type "${variantType}". File: variance.ts, Line: 50`
             );
           }
         }
