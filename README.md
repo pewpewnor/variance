@@ -4,13 +4,11 @@ This is a utility class that can help Tailwind CSS users to create multiple vari
 
 ## How to use:
 
-### Step 0: Install the "tailwind-merge" package from npm / yarn
+### Step 0: Install the "tailwind-merge" package from package manager such as npm
 
 ### Step 1: Create a new variance, usually in it's own file
 
-```javascript
-// buttonVariance.js
-
+```js
 const buttonVariance = new Variance("flex justify-between", {
   size: {
     default: "h-2 w-2 bg-red-400",
@@ -28,7 +26,7 @@ const buttonVariance = new Variance("flex justify-between", {
 
 Example of usage in a React component:
 
-```javascript
+```js
 <button className={buttonVariance.getVariant({ height: "short" })}>
   Click me pls!
 </button>
@@ -38,4 +36,4 @@ Based on this example, the button's className value would be: `"flex justify-bet
 
 As you can see, the result includes flex justify-between from the first parameter, which is always included in the result. It also has `h-2 w-2 bg-red-400`. This is because we didn't specify the variant for the variant type 'size', so it takes the default property value for the variant type 'size'. Finally, the `h-1` comes from the 'height' variant type with the variant 'tall', since we specified `height: "tall"` in the argument.
 
-### If you find this helpful or want to help me refactor / add new features, I will be happy to accept anyone's PR.
+**If you find this helpful or want to help me refactor / add new features, I will be happy to accept anyone's PR.**
