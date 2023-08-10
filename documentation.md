@@ -1,4 +1,4 @@
-## Creation Process Syntax
+## Syntax for Variance Creation
 
 ```js
 const always = "class name"
@@ -23,7 +23,7 @@ const createdVariants = {
 const variance = new Variance(always, createdVariants);
 ```
 
-## Usage Process Syntax
+## Syntax for Variance Usage
 
 ```js
 const chosenVariants = {
