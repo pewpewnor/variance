@@ -34,6 +34,44 @@ Example of usage in a React component:
 
 Based on this example, the button's className value would be: `"flex justify-between h-2 w-2 bg-red-400 h-1"`. However, because of tailwind-merge, the conflict between `h-2` and `h-1` would be resolved, and the actual string result would be: `"flex justify-between w-2 bg-red-400 h-1"`, since `h-1` is assumed to override the value of `h-2`.
 
+
+# Documentation
+
+## Syntax for Variance Creation
+
+```js
+const always = "class name"
+
+const variant1 = {
+	default: "class name"
+	variantKey1: "class name"
+	variantKey2: "class name"
+}
+
+const variant2 = {
+	default: "class name"
+	variantKey1: "class name"
+	variantKey2: "class name"
+}
+
+const createdVariants = {
+	variantType1: variant1
+	variantType2: variant2
+}
+
+const variance = new Variance(always, createdVariants);
+```
+
+## Syntax for Variance Usage
+
+```js
+const chosenVariants = {
+	chosenVariantType1: chosenVariantKey,
+};
+
+const result = variance.getVariant(chosenVariants);
+```
+
 As you can see, the result includes flex justify-between from the first parameter, which is always included in the result. It also has `h-2 w-2 bg-red-400`. This is because we didn't specify the variant for the variant type 'size', so it takes the default property value for the variant type 'size'. Finally, the `h-1` comes from the 'height' variant type with the variant 'tall', since we specified `height: "tall"` in the argument.
 
 **If you find this helpful or want to help me refactor / add new features, I will be happy to accept anyone's PR.**
