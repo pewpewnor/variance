@@ -21,6 +21,7 @@ const buttonVariance = new Variance("flex justify-between", {
   },
 });
 ```
+<a href="#documentation">You can take a much closer look at the syntax / template here</a>
 
 ### Step 2: Import the variant from that file and use it
 
@@ -49,7 +50,7 @@ As you can see, the result includes flex justify-between from the first paramete
 # Documentation
 
 ## Syntax for Variance Creation
-
+<a name="documentation"></a>
 ```js
 const always = "class name"
 
