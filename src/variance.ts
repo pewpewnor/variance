@@ -24,7 +24,6 @@ class Variance {
 
 	public getVariant(chosenVariants: ChosenVariants) {
 		// Throw error if any of the chosen variant type does not exist in created variants
-
 		const chosenVariantKeys = Object.keys(chosenVariants);
 		for (const chosenVariantType of chosenVariantKeys) {
 			if (!(chosenVariantType in this.createdVariants)) {
@@ -37,7 +36,6 @@ class Variance {
 		const result = [
 			this.always,
 			// Loop for each created variants
-
 			...Object.keys(this.createdVariants).map((variantType) => {
 				const variant = this.createdVariants[variantType];
 				// If user specify this variant type
@@ -53,7 +51,6 @@ class Variance {
 					}
 				}
 				// If user did not specify this variant type, use the default property value
-
 				return variant.default;
 			}),
 		];
