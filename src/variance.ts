@@ -39,7 +39,6 @@ class Variance {
 			...Object.keys(this.createdVariants).map((variantType) => {
 				const variant = this.createdVariants[variantType];
 				// If user specify this variant type
-
 				if (variantType in chosenVariants) {
 					const chosenVariantKey = chosenVariants[variantType];
 					if (chosenVariantKey in variant) {
